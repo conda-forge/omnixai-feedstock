@@ -1,5 +1,5 @@
 {% set name = "OmniXAI" %}
-{% set version = "1.2.3" %}
+{% set version = "1.2.4" %}
 
 package:
   name: {{ name|lower }}
@@ -7,14 +7,14 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/omnixai-{{ version }}.tar.gz
-  sha256: 2f8c9ed9ae3977b19f3fcd40a33a56b94fabc76ee63652c101dcaa39db40ba98
+  sha256: 8b24c622a1e3f3c65007b339fe3da29f66e0df44db18289aeff3f21c0f683614
 
 build:
   noarch: python
   script:
-   - {{ PYTHON }} -m pip install . -vv
+    - {{ PYTHON }} -m pip install . -vv
    # Open Upstream Bug, looks like it is installing its docs globally
-   - rm -rf ${SP_DIR}/docs
+    - rm -rf ${SP_DIR}/docs
   number: 0
 
 requirements:

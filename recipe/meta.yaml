@@ -1,5 +1,5 @@
 {% set name = "OmniXAI" %}
-{% set version = "1.2.4" %}
+{% set version = "1.2.5" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/omnixai-{{ version }}.tar.gz
-  sha256: 8b24c622a1e3f3c65007b339fe3da29f66e0df44db18289aeff3f21c0f683614
+  sha256: e7f9906017d83255791a502168325df143fba1a9bd967bdc45264cc843c0966d
 
 build:
   noarch: python

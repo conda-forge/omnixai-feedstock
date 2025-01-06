@@ -13,7 +13,7 @@ build:
   noarch: python
   script:
     - {{ PYTHON }} -m pip install . -vv
-   # Open Upstream Bug, looks like it is installing its docs globally
+    # Open Upstream Bug, looks like it is installing its docs globally
     - rm -rf ${SP_DIR}/docs
   number: 1
 
@@ -21,6 +21,7 @@ requirements:
   host:
     - python {{ python_min }}
     - pip
+    - setuptools
   run:
     - python >={{ python_min }},<4.0
     - numpy >=1.17,<1.24
@@ -45,8 +46,8 @@ requirements:
 
 test:
   imports:
-# Open Upstream Bug, looks like it is installing its docs globally
-#    - docs
+    # Open Upstream Bug, looks like it is installing its docs globally
+    #- docs
     - omnixai
   commands:
     - pip check
